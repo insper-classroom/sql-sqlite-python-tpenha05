@@ -12,50 +12,58 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos disponíveis para a plataforma Xbox One. (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi
+      WHERE platform = 'XOne'
      ```
    - **Resultado**
-    
+![Alt text](image.png)    
 
 
 2. **Jogos de Ação após 2010**:
    - **Enunciado**: Liste todos os jogos do gênero "Ação" que foram lançados após 2010.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi
+      WHERE year > 2010 AND genre = 'Action'
+
      ```
    - **Resultado**
-    
+    ![Alt text](image-1.png)
 
 
 3. **Jogos mais recentes**:
    - **Enunciado**: Liste os 5 jogos mais recentes lançados.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+        SELECT * FROM vgsales_pbi
+        ORDER BY Year DESC
      ```
    - **Resultado**
-    
+    ![Alt text](image-2.png)
 
 
 4. **Jogos mais antigos**:
    - **Enunciado**: Liste os 5 jogos mais antigos.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+        SELECT * FROM vgsales_pbi
+        ORDER BY Year DESC
+
      ```
    - **Resultado**
-    
+    ![Alt text](image-3.png)
 
 
 5. **Jogos de Aventura com mais vendas na América do Norte**:
    - **Enunciado**: Quais são os 3 jogos do gênero "Aventura" com as maiores vendas na América do Norte?  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE genre = 'Action'
+      ORDER BY na_sales DESC    
+
      ```
    - **Resultado**
-    
+    ![Alt text](image-4.png)
 
 
 	 
@@ -63,10 +71,10 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos dos gêneros "RPG" ou "Strategy" lançados após 2005.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE genre = 'Role-Playing' OR genre = 'Strategy' and year > 2005
      ```
    - **Resultado**
-    
+    ![Alt text](image-5.png)
 
 
 
