@@ -71,6 +71,16 @@ VALUES ({values});
         conn.commit()
         conn.close()
 
+    def drop_table(self): 
+        conn = sqlite3.connect(self.nome_database) 
+        cursor = conn.cursor() 
+        cursor.execute(f"""
+                       DROP TABLE {self.nome_tabela};
+                       """) 
+        conn.commit()
+        conn.close() 
+        self.criar_tabela()
+
 
 
 
